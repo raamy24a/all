@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 11:29:15 by radib             #+#    #+#             */
-/*   Updated: 2025/05/05 16:41:28 by radib            ###   ########.fr       */
+/*   Updated: 2025/05/05 17:10:59 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int	ft_hexa( int decimal, char x)
 {
 	int		temp;
 	int		len;
-	char	char_temp;
+	char	buffer[16];
+	int		i;
 
 	len = 0;
 	while (decimal > 0)
@@ -40,10 +41,13 @@ int	ft_hexa( int decimal, char x)
 			temp += 39;
 		else if (temp >= 10 && x == 'X')
 			temp += 7;
-		write (1, &char_temp, 1);
+		buffer[len] = temp + '0';
 		decimal /= 16;
 		len++;
 	}
+	i = len;
+	while (i--)
+		write(1, &buffer[i], 1);
 	return (len);
 }
 
@@ -106,5 +110,7 @@ int	ft_printf(const char *format_str, ...)
 
 int	main (void)
 {
-	ft_printf("mot%c", 'a');
+	char bonjour[] = "bonjours";
+	printf("%p\n", bonjour);
+	ft_printf("%p\n", bonjour);
 }
