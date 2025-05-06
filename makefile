@@ -13,14 +13,14 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $@ $?
 
-bonus: $(OBJECTS) $(BOBJECTS)
+bonus: $(OBJECTS)
 	$(AR) -r $(NAME) $?
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
 clean:
-	rm -f $(OBJECTS) $(BOBJECTS)
+	rm -f $(OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)

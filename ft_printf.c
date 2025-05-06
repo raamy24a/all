@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 11:29:15 by radib             #+#    #+#             */
-/*   Updated: 2025/05/06 12:50:57 by radib            ###   ########.fr       */
+/*   Updated: 2025/05/06 13:38:09 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_hexa( unsigned long decimal, char x)
 	while (decimal > 0)
 	{
 		temp = decimal % 16;
-		if (temp >= 10 && x == 'x' || temp >= 10 && x == 'p')
+		if ((temp >= 10 && x == 'x') || (temp >= 10 && x == 'p'))
 			temp += 39;
 		else if (temp >= 10 && x == 'X')
 			temp += 7;
