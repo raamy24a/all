@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:57:46 by radib             #+#    #+#             */
-/*   Updated: 2025/05/06 12:56:39 by radib            ###   ########.fr       */
+/*   Updated: 2025/05/06 14:02:28 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@
 int	ft_putnbr(int n);
 int	ft_put_unsigned(unsigned int decimal);
 int	ft_putstr(char *s);
-
+int	ft_printf(const char *format_str, ...);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:56:30 by radib             #+#    #+#             */
-/*   Updated: 2025/05/06 13:36:26 by radib            ###   ########.fr       */
+/*   Updated: 2025/05/06 14:23:45 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_put_unsigned(unsigned int decimal)
 
 	n = decimal;
 	if (n == 0)
-		write(1, "0", 1);
+		return (ft_putstr("0"));
 	i = nbr_len(n);
 	while (i > 0)
 	{
