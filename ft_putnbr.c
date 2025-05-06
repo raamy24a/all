@@ -6,12 +6,11 @@
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:56:30 by radib             #+#    #+#             */
-/*   Updated: 2025/05/05 16:14:08 by radib            ###   ########.fr       */
+/*   Updated: 2025/05/06 12:59:33 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
-#include <unistd.h>
+#include "ft_printf.h"
 
 static int	ten_pow(int pow)
 {
@@ -26,9 +25,9 @@ static int	ten_pow(int pow)
 	return (i);
 }
 
-static int	nbr_len(int n)
+static int	nbr_len(unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (n > 0)
@@ -39,7 +38,7 @@ static int	nbr_len(int n)
 	return (i);
 }
 
-int	ft_put_unsinged(unsigned int decimal)
+int	ft_put_unsigned(unsigned int decimal)
 {
 	unsigned int	n;
 	int				i;
@@ -73,9 +72,9 @@ int	ft_putnbr(int n)
 		write(1, "-", 1);
 	}
 	if (n == 0)
-		write(1, "0", 1);
+		return (ft_putstr("0"));
 	if (n == -2147483648)
-		write(1, "2147483648", 10);
+		return (ft_putstr("2147483648"));
 	i = nbr_len(n);
 	while (i > 0)
 	{

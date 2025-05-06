@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.h                                         :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: radib <radib@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:57:46 by radib             #+#    #+#             */
-/*   Updated: 2025/05/05 15:36:13 by radib            ###   ########.fr       */
+/*   Updated: 2025/05/06 12:56:39 by radib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINT_H
-# define FT_PRINT_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
 
-int	ten_pow(int pow);
 int	ft_putnbr(int n);
-int	ft_put_unsinged(unsigned int decimal);
+int	ft_put_unsigned(unsigned int decimal);
+int	ft_putstr(char *s);
+
 
 #endif
